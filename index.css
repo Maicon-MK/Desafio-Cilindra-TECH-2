@@ -1,84 +1,88 @@
 * {
-	padding: 0;
 	margin: 0;
 	padding: 0;
-	border: 0;
-	box-sizing: border-box;
+	font-family: "montserrat", sans-serif;
 }
 
 body {
 	background: #E9E9E9;
 }
 
-a {
-	text-decoration: none;
+#icon-logo {
+	margin-top: 1%;
+	margin-left: 6%;
 }
 
-.Containmenu {
-	position: absolute;
-	width: 100%;
-	height: 12%;
-	background: #ffffff;
+.header {
+	height: 100px;
+	background: #FFFFFF;
+	padding: 0 20px;
+	color: #846219;
 }
 
 .logo {
-	position: absolute;
-	width: 71px;
-	height: 70px;
-	left: 4%;
-	top: 20%;
-}
-
-.texto-logo {
-	position: absolute;
-	left: 147px;
-	top: 20px;
-	font-family: 'Lato', sans-serif;
-	color: #846219;
+	line-height: 100px;
+	float: left;
 	font-size: 41.2px;
-	line-height: 48px;
-	display: flex;
-	align-items: flex-end;
+	margin-left: 1%;
+	margin-top: -0.5%;
+
 }
 
-.texto-sub-logo {
-	position: absolute;
-	left: 151px;
-	top: 68px;
-	font-family: 'Lato', sans-serif;
-	font-size: 16.2px;
-	line-height: 19px;
-	color: #846219;
+.menu {
+	float: right;
+	line-height: 100px;
 }
 
-.about {
-	position: absolute;
-	left: 53%;
-	top: 47px;
-	font-size: 16.2px;
-	line-height: 19px;
+.menu a {
 	color: #846219;
-	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0 60px;
+	transition: 0.4s;
+	letter-spacing: 5px;
 }
 
-.models {
+#sub-text {
 	position: absolute;
-	left: 73%;
-	top: 47px;
-	color: #846219;
+	left: 11%;
+	top: 6.3%;
 	font-family: 'Lato', sans-serif;
-	font-size: 16.2px;
-	line-height: 19px;
+	font-size: 21px;
+	line-height: 40px;
+	padding: 0 20px;
+	word-spacing: 3px;
+	letter-spacing: 5px;
+	color: #846219a6;
 }
 
-.guarantee {
+.show-menu-btn, .hide-menu-btn {
+	transition: 0.4s;
+	font-size: 35px;
+	cursor: pointer;
+	display: none;
+
+}
+
+.show-menu-btn {
+	float: left;
+
+}
+
+.show-menu-btn i {
+	line-height: 100px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+	color: #efc75e;
+}
+
+#chk {
 	position: absolute;
-	left: 90%;
-	top: 47px;
-	font-size: 16.2px;
-	line-height: 19px;
-	color: #846219;
-	font-family: 'Lato', sans-serif;
+	visibility: hidden;
+	z-index: -1111;
 }
 
 .fita {
@@ -86,6 +90,8 @@ a {
 	left: 606px;
 	top: 345px;
 	mix-blend-mode: multiply;
+	width: 100%;
+	max-width: 600px;
 }
 
 .texto-img-fita1 {
@@ -101,6 +107,8 @@ a {
 
 .fita2 {
 	position: absolute;
+	width: 100%;
+	max-width: 903px;
 	left: 320px;
 	top: 10%;
 	mix-blend-mode: multiply;
@@ -117,16 +125,15 @@ a {
 
 .texto-img-fita2 {
 	position: absolute;
-	width: 700px;
+	width: 650px;
 	height: 162px;
 	left: 139px;
 	top: 40%;
 	font-family: 'Lato', sans-serif;
-	font-size: 69.2px;
-	line-height: 81px;
-	display: flex;
-	align-items: flex-end;
+	font-size: 49px;
+	line-height: 60px;
 	color: #FFFFFF;
+
 }
 
 .sub-texto-2 {
@@ -149,7 +156,7 @@ footer {
 	position: absolute;
 	width: 100%;
 	height: 20%;
-	top: 2048px;
+	top: 1700px;
 	background: #E9E9E9;
 }
 
@@ -212,10 +219,171 @@ h3 {
 	position: absolute;
 	left: 35%;
 	top: 35%;
-	font-family: 'RobotoCondensed';
+	font-family: 'Lato', sans-serif;
 	font-size: 27px;
-	line-height: 19px;
+	line-height: 10px;
 	display: flex;
 	align-items: flex-end;
 	color: #716565;
+}
+
+
+@media screen and (max-width:375px) {
+	.show-menu-btn, .hide-menu-btn {
+		display: block;
+	}
+
+	.menu {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #333;
+		left: -100%;
+		top: 0;
+		text-align: center;
+		padding: 80px 0;
+		line-height: normal;
+		transition: 0.7s;
+	}
+
+	.menu a {
+		display: block;
+		padding: 20px;
+	}
+
+	.hide-menu-btn {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+	}
+
+	#chk:checked~.menu {
+		left: 0;
+
+	}
+
+	p, h2 {
+		display: none;
+	}
+
+	.logo {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 140px;
+		top: 20px;
+	}
+
+	.texto-img-fita1 {
+		position: absolute;
+		width: 226px;
+		height: 124px;
+		left: 22px;
+		top: 28%;
+		font-size: 53.2px;
+		line-height: 62px;
+	}
+
+	.fita {
+		position: absolute;
+		width: 360px;
+		height: 180px;
+		left: 5px;
+		top: 55%;
+
+	}
+
+	.texto-img-fita2 {
+		width: 360px;
+		height: 96px;
+		left: 14px;
+		font-size: 41.2px;
+		font-family: 'Lato', sans-serif;
+		top: 12%;
+		color: #FFFFFF;
+	}
+
+	.containtsub {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		top: 100%;
+	}
+
+	.fita2 {
+		position: absolute;
+		width: 69%;
+		left: 31%;
+		top: 60%;
+
+	}
+
+	.sub-texto-2 {
+		position: absolute;
+		width: 293px;
+		height: 90px;
+		left: 14px;
+		top: 35%;
+		font-size: 26.2px;
+		line-height: 31px;
+	}
+
+	footer {
+		position: absolute;
+		width: 100%;
+		height: 70%;
+		top: 190%;
+		text-align: center;
+	}
+
+	.falow {
+		display: flex;
+		margin-top: 10%;
+		text-align: center;
+		font-size: 27.2px;
+		margin-left: -10%;
+		width: 67%;
+	}
+
+	.YT {
+		position: absolute;
+		width: 40x;
+		height: 45px;
+		left: 20%;
+		top: 20%;
+	}
+
+	.tt {
+		position: absolute;
+		width: 40x;
+		height: 45px;
+		left: 43%;
+		top: 20%;
+	}
+
+	.face {
+		position: absolute;
+		width: 40x;
+		height: 45px;
+		left: 65%;
+		top: 20%;
+	}
+
+	.contact {
+		margin-left: -15%;
+		margin-top: 50%;
+	}
+
+	.ende {
+		position: absolute;
+		width: 200px;
+		margin-right: 1000px;
+		margin-left: -12%;
+		margin-top: 30%;
+		font-size: 20px;
+		line-height: 19px;
+
+	}
+
 }
